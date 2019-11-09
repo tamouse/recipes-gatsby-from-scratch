@@ -1,10 +1,11 @@
 ---
-title: "Twenty Thousand Dollar Chili Recipe"
-date: 2010-05-18T20:18:16-0500
-tags: [chili, contest-winner]
-external_url: http://cookingindex.com/recipes/73897/20000-prize-winning-chili.htm
+title: Twenty Thousand Dollar Chili Recipe
+tags:
+- chili
+- contest-winner
+date: '2010-05-18T20:18:16-05:00'
+source: http://cookingindex.com/recipes/73897/20000-prize-winning-chili.htm
 ---
-
 This actually won a $20,000 prize in a chili cookoff. Must be in the wrist.
 
 

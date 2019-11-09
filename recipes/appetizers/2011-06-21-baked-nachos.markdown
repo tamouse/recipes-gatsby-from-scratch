@@ -1,9 +1,11 @@
 ---
-title: "Baked Nachos"
-date: 2011-06-21T23:10:43-0500
-tags: [chips, cheese, chili]
+title: Baked Nachos
+tags:
+- chips
+- cheese
+- chili
+date: '2011-06-21T23:10:43-05:00'
 ---
-
 This is surprisingly simple and so delicious! I first had baked nachos from a little hole-in-the-wall burrito place in Santa Clara, whose name escapes me now. They had great burritos though, and this was what they made of nachos!
 
 
@@ -21,8 +23,8 @@ This is surprisingly simple and so delicious! I first had baked nachos from a li
 
 ##  Directions
 
-1.  Pre-heat oven to 350&deg;F
-1.  Brown the ground beef with the onions and the seasoning mix well, drain the excess fat
+1.  Pre-heat oven to 350&degF;.
+1.  Brown the ground beef with the onions and the seasoning mix well. Drain.
 1.  Place a doule layer of foil on a cooking tray, curling up the edges of the foil to form a leak barrier
 1.  Spread the chips on the foil
 1.  Layer the ground beef mixture onto the chips, spreading out so it covers well

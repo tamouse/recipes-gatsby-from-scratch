@@ -1,7 +1,10 @@
 ---
-title: "Pea Pod Supreme Chicken Salad"
-date: 2011-05-23T12:31:22-0500
-tags: [chicken, pea-pods, asian]
+title: Pea Pod Supreme Chicken Salad
+tags:
+- chicken
+- pea-pods
+- asian
+date: '2011-05-23T12:31:22-05:00'
 ---
 A nice summery salad with pasta, peas and chicken.
 

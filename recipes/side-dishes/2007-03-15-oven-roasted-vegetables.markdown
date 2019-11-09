@@ -1,9 +1,11 @@
 ---
-title: "Oven Roasted Vegetables"
-date: 2007-03-15T23:30:39-0600
-tags: [vegetables, roasting]
+title: Oven Roasted Vegetables
+tags:
+- vegetables
+- roasting
+date: '2007-03-15T23:30:39-05:00'
 ---
-I love oven-roasted vegetables. They bring a distinctive flavour to salads and other dishes, as well as being great as an accompaniment to a main dish.
+I love oven-roasted vegetables. They bring a distinctive flavour to salads and other dishes, as well as being great as an accompaniment to a main dish. 
 
 This recipe came from somewhere, and as I read it over, it seems pretty rigid. Feel free to let loose with pretty much anything.
 
@@ -24,10 +26,10 @@ This recipe came from somewhere, and as I read it over, it seems pretty rigid. F
 
 ## Directions
 1. Heat oven to 425&degF;
-1. Combine first 6 ingredients in a large bowl; stir with a whisk.
-1. Add vegetables; toss well to coat.
-1. Arrange vegetables in a single layer on a baking pan; spray with olive oil.
-1. Bake at 425&degF; for 40 minutes or until tender and lightly browned, stirring occasionally.
+1. Combine first 6 ingredients in a large bowl; stir with a whisk. 
+1. Add vegetables; toss well to coat. 
+1. Arrange vegetables in a single layer on a baking pan; spray with olive oil. 
+1. Bake at 425&degF; for 40 minutes or until tender and lightly browned, stirring occasionally. 
 
 Makes 6 servings (1 cup each)
 
@@ -55,3 +57,4 @@ This gets easier if you just put the oil, vinegar, spices and veggies in a big z
 
 [roasted tomatoes]: {{ site.baseurl }}{% post_url 2012-03-16-roasted-tomatoes %}
 [brussels sprouts]: {{ site.baseurl }}{% post_url 2011-10-16-roasted-brussels-sprouts-with-shallots-and-bacon %}
+

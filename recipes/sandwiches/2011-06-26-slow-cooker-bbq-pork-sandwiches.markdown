@@ -1,7 +1,10 @@
 ---
-title: "Slow Cooker BBQ Pork Sandwiches"
-date: 2011-06-26T04:43:00-0500
-tags: [bbq, crockpot, pork]
+title: Slow Cooker BBQ Pork Sandwiches
+tags:
+- bbq
+- crockpot
+- pork
+date: '2011-06-26T04:43:00-05:00'
 ---
 An easy crockpot recipe for BBQ pulled pork sammiches!  Barbecued pork sandwiches are so easily made in the slow cooker.
 
@@ -18,7 +21,7 @@ An easy crockpot recipe for BBQ pulled pork sammiches!  Barbecued pork sandwiche
 
 ## Directions
 
-1.  Place pork roast in a lightly greased 3 1/2 to 5-quart slow cooker.
+1.  Place pork roast in a lightly greased 3 1/2 to 5-quart slow cooker. 
 
 1.  Combine onion, barbecue sauce, honey, and hot pepper; pour over roast.
 
@@ -31,3 +34,4 @@ Serves 6.
 
 
 Delicious with beans and coleslaw! For a Carolina experience, pile the coleslaw right on the sandwich, with some fries if you have them.
+

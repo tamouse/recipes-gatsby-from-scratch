@@ -41,7 +41,7 @@ Since the original space for this recipe files was a JekyllRB repo, a few things
 - we don't need the category anymore
 - the `external_url` variable would probably be better called `source`
 
-It would probably make sense to write a simple filter to rewrite the frontmatter on posts.
+It would probably make sense to write a simple filter to rewrite the frontmatter on posts. (See `./scripts/fix_date.rb` - it fixes more than the date.)
 
 ### Body
 

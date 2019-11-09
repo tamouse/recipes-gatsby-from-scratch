@@ -1,14 +1,18 @@
 ---
-title: "Easy Pot Roast"
-date: 2010-05-18T20:14:16-0500
-tags: [american-cuisine, pot-roast, beef, crockpot]
+title: Easy Pot Roast
+tags:
+- american-cuisine
+- pot-roast
+- beef
+- crockpot
+date: '2010-05-18T20:14:16-05:00'
 ---
 Simple crockpot pot roast recipe. Pretty standard.
 
 ## Ingredients:
 
-* 1 pot roast (approximately 5-6 lbs.)
-* 1 1/2 cup water
+* 1 pot roast (approximately 5-6 lbs.)  
+* 1 1/2 cup water 
 * 3 beef bouillon cubes
 * 1 packet onion soup mix
 

@@ -1,7 +1,10 @@
 ---
-title: "Blueberry Pancakes"
-date: 2011-06-26T05:00:56-0500
-tags: [pancakes, blueberries, breakfast-for-dinner]
+title: Blueberry Pancakes
+tags:
+- pancakes
+- blueberries
+- breakfast-for-dinner
+date: '2011-06-26T05:00:56-05:00'
 ---
 I've been making pancakes for years and years, since I was a pre-teen.
 

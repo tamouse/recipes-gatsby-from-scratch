@@ -1,8 +1,11 @@
 ---
-title: "Strawberry Margerita"
-date: 2012-06-07T17:03:37-0500
-categories: [drinks]
-tags: [margerita, strawberries, alcohol, tequila]
+title: Strawberry Margerita
+tags:
+- margerita
+- strawberries
+- alcohol
+- tequila
+date: '2012-06-07T17:03:37-05:00'
 ---
 A sweeter version of the classic drink.
 
@@ -21,3 +24,5 @@ A sweeter version of the classic drink.
 1.  Process on high until frothy
 
 1.  Pour into margerita glasses
+
+

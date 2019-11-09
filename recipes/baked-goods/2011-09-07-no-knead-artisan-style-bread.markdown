@@ -1,9 +1,9 @@
 ---
-title: "No Knead Artisan Style Bread"
-date: 2011-09-07T11:57:06-0500
-categories: [baked-goods]
-tags: [bread]
-external_url: http://allrecipes.com/Recipe/No-Knead-Artisan-Style-Bread/
+title: No Knead Artisan Style Bread
+tags:
+- bread
+date: '2011-09-07T11:57:06-05:00'
+source: http://allrecipes.com/Recipe/No-Knead-Artisan-Style-Bread/
 ---
 No kneading makes this an easy bread recipe.
 

@@ -1,7 +1,9 @@
 ---
-title: "Making Perfect Pasta"
-date: 2011-06-28T19:58:06-0500
-tags: [howto, pasta]
+title: Making Perfect Pasta
+tags:
+- howto
+- pasta
+date: '2011-06-28T19:58:06-05:00'
 ---
 It isn't hard to make good pasta, but it does take more than just throwing noodles in a pot and running them over heat.
 

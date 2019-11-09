@@ -1,6 +1,6 @@
 ---
-title: "Hollandaise Sauce"
-date: 2011-06-26T05:18:52-0500
+title: Hollandaise Sauce
+date: '2011-06-26T05:18:52-05:00'
 ---
 There are easy dry mixes for hollandaise that are every bit as good as
 this recipe, without the need for double boiling, and being attentive
@@ -34,3 +34,4 @@ directions on it.
 1.  Whisk in salt, then remove from heat.
 
 1.  Place a lid on pan to keep sauce warm until ready to serve.
+

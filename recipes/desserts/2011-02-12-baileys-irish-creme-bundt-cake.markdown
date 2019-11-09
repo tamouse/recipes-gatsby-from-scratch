@@ -1,8 +1,10 @@
 ---
-title: "Baileys Irish Creme Bundt Cake"
-date: 2011-02-12T00:28:10-0600
-categories: [desserts]
-tags: [cake, bundt, baileys]
+title: Baileys Irish Creme Bundt Cake
+tags:
+- cake
+- bundt
+- baileys
+date: '2011-02-12T00:28:10-06:00'
 ---
 A super moist, delicious cake recipe using Bailey's Irish Cream.
 
