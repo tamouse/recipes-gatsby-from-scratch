@@ -1,0 +1,9 @@
+{
+  "name": "recipes-gatsby-from-scratch",
+  "version": "0.1.0",
+  "description": "tamouse's recipe blog in gatsby built from scratch",
+  "main": "index.js",
+  "author": "Tamara Temple <tamouse@gmail.com> (https://github.com/tamouse)",
+  "license": "MIT",
+  "private": true
+}
