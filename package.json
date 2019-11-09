@@ -6,5 +6,13 @@
   "author": "Tamara Temple <tamouse@gmail.com> (https://github.com/tamouse)",
   "license": "MIT",
   "private": true,
-  "repository": "git@github.com:tamouse/recipes-gatsby-from-scratch.git"
+  "repository": "git@github.com:tamouse/recipes-gatsby-from-scratch.git",
+  "dependencies": {
+    "gatsby": "^2.17.10",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "scripts": {
+    "dev": "gatsby develop -p 9988 -o"
+  }
 }
