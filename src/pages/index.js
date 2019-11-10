@@ -1,17 +1,22 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import { useRecipeCategories } from "../hooks/useCategories"
+import Dump from "../components/Dump"
 
 export const RECIPES_QUERY = graphql`
   query RECIPES_QUERY {
     allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
+        id
+        excerpt
         frontmatter {
           title
           date
         }
-        fileAbsolutePath
+        fields {
+          slug
+        }
       }
       pageInfo {
         itemCount
@@ -49,14 +54,20 @@ export default ({ data }) => {
         {recipes.length > 0 ? (
           recipes.map((recipe, index) => {
             const {
+              id,
+              excerpt,
               frontmatter: { title, date },
-              fileAbsolutePath,
+              fields,
             } = recipe
             return (
-              <li key={`recipe-${index}`}>
-                <strong>{title}</strong> <em>{date}</em>
-                <br />
-                <code>{fileAbsolutePath}</code>
+              <li key={`recipe-${index}`} style={{ paddingBottom: `10px` }}>
+                <Link to={fields.slug}>
+                  <strong>{title}</strong>
+                </Link>{" "}
+                <em>{date}</em> (<code>{id}</code>)
+                <p>
+                  <em>{excerpt}</em>
+                </p>
               </li>
             )
           })
