@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Tamouse's Recipe File (in gatsby)",
-    description:
-      "This is my personal collection of recipes, written using gatsbyjs",
+    title: "Tamouse's Recipe File",
+    description: "My personal collection of recipes, written using gatsbyjs",
   },
   plugins: [
     {

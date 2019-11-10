@@ -20,9 +20,9 @@ export default ({ data }) => {
   )
 }
 
-export const FrontPageRecipes = graphql`
-  query FrontPageRecipes {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 30) {
+export const ALL_RECIPES = graphql`
+  query ALL_RECIPES {
+    allMdx(sort: { fields: frontmatter___title, order: ASC }) {
       nodes {
         ...RecipeFragment
       }

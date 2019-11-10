@@ -49,24 +49,36 @@ There are some posts that contain Liquid templating code. There's no direct anal
 
 ## Category Pages
 
-I want to be able to list recipes for a given category.
+I want to be able to list recipes for a given category. To do this, I have to generate the page for each category.
 
-Gatsby's `Link` provides a way to do this by sending a `state` prop: <https://www.gatsbyjs.org/docs/gatsby-link/#pass-state-as-props-to-the-linked-page>. I'm not sure this will quite work, though.
+This requires additions in `gatsby-node.js` to build the each page using a template, just like we're doing with markdown pages, only we need a separate source for this.
 
-I thing I'll need to generate the category pages in `gatsby-node.js`.
+The following query is added:
 
-Rather than duplicating a bunch of code, I could use the `useCategories` hook, or write a similar hook that gets the recipes in a single category, `useCategory("appetizers")`, to get the list of recipes. Maybe something like:
-
-``` javascript
-import React from "react"
-import { useCategory } from "../src/hooks/useCategory"
-import RecipeList from "../src/components/RecipeList"
-
-export default ({category}) => {
-    const { recipes } = useCategory(category)
-    return (
-	    <h3>{category}</h3>
-	    <RecipeList recipes={recipes} />
-    )
+``` graphql
+allDirectory(filter: { absolutePath: { glob: "**/recipes/*" } }) {
+  nodes {
+    relativePath
+  }
 }
 ```
+
+This provides a collection of paths directly under the `/recipes/` directory, which are my categories.
+
+Inside the `then` block, I've added the following:
+
+``` javascript
+const categories = result.data.allDirectory.nodes
+
+categories.forEach(category => {
+  createPage({
+    path: "/" + category.relativePath + "/",
+    component: categoryTemplate,
+    context: {
+      category: category.relativePath,
+    },
+  })
+})
+```
+
+The category template is at `src/templates/categoryTemmplate.js`. The template needs to list the recipes that are included in the category. Since these are markdown files, I'm using the `allMdx` query to pull them in, filtering on the category, and sorting by title.

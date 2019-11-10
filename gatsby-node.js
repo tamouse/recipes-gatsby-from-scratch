@@ -4,6 +4,7 @@ const path = require(`path`)
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
   const recipeTemplate = path.resolve("./src/templates/recipeTemplate.js")
+  const categoryTemplate = path.resolve("./src/templates/categoryTemplate.js")
 
   return graphql(`
     {
@@ -16,6 +17,11 @@ exports.createPages = ({ actions, graphql }) => {
             title
           }
           fileAbsolutePath
+        }
+      }
+      allDirectory(filter: { absolutePath: { glob: "**/recipes/*" } }) {
+        nodes {
+          relativePath
         }
       }
     }
@@ -34,6 +40,18 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           slug: recipe.fields.slug,
           category: recipe.fields.category,
+        },
+      })
+    })
+
+    const categories = result.data.allDirectory.nodes
+
+    categories.forEach(category => {
+      createPage({
+        path: "/" + category.relativePath + "/",
+        component: categoryTemplate,
+        context: {
+          category: category.relativePath,
         },
       })
     })
