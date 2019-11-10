@@ -11,5 +11,5 @@ export const useRecipeCategories = () => {
       }
     `
   )
-  return allDirectory.nodes
+  return allDirectory.nodes.map(category => category.relativePath)
 }

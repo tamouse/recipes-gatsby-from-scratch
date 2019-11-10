@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import { useRecipeCategories } from "../hooks/useCategories"
-import Dump from "../components/Dump"
 
 export const RECIPES_QUERY = graphql`
   query RECIPES_QUERY {
@@ -43,7 +42,7 @@ export default ({ data }) => {
       <ul>
         {categories.length > 0 ? (
           categories.map((category, index) => {
-            return <li key={`category-${index}`}>{category.relativePath}</li>
+            return <li key={`category-${index}`}>{category}</li>
           })
         ) : (
           <li>No categories</li>

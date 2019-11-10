@@ -1,4 +1,4 @@
-# Gatsby 2.0 Edition of my recipe file
+n# Gatsby 2.0 Edition of my recipe file
 
 There have been at least 2 other attemps at doing this in Gatsby.
 
@@ -46,3 +46,27 @@ It would probably make sense to write a simple filter to rewrite the frontmatter
 ### Body
 
 There are some posts that contain Liquid templating code. There's no direct analog in gatsby. This might make sense are a subcomponent, or as a React component in the mdx page. We'll have to see.
+
+## Category Pages
+
+I want to be able to list recipes for a given category.
+
+Gatsby's `Link` provides a way to do this by sending a `state` prop: <https://www.gatsbyjs.org/docs/gatsby-link/#pass-state-as-props-to-the-linked-page>. I'm not sure this will quite work, though.
+
+I thing I'll need to generate the category pages in `gatsby-node.js`.
+
+Rather than duplicating a bunch of code, I could use the `useCategories` hook, or write a similar hook that gets the recipes in a single category, `useCategory("appetizers")`, to get the list of recipes. Maybe something like:
+
+``` javascript
+import React from "react"
+import { useCategory } from "../src/hooks/useCategory"
+import RecipeList from "../src/components/RecipeList"
+
+export default ({category}) => {
+    const { recipes } = useCategory(category)
+    return (
+	    <h3>{category}</h3>
+	    <RecipeList recipes={recipes} />
+    )
+}
+```

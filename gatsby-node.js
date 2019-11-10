@@ -15,6 +15,7 @@ exports.createPages = ({ actions, graphql }) => {
           frontmatter {
             title
           }
+          fileAbsolutePath
         }
       }
     }
@@ -32,6 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: recipeTemplate,
         context: {
           slug: recipe.fields.slug,
+          category: recipe.fields.category,
         },
       })
     })
@@ -46,6 +48,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
+    })
+    createNodeField({
+      name: `recipeCategory`,
+      node,
+      value: value.split("/")[1], // value looks like "/:recipeCategory/:recipeFile"
     })
   }
 }
