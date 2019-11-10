@@ -1,4 +1,4 @@
-n# Gatsby 2.0 Edition of my recipe file
+# Gatsby 2.0 Edition of my recipe file
 
 There have been at least 2 other attemps at doing this in Gatsby.
 
@@ -82,3 +82,27 @@ categories.forEach(category => {
 ```
 
 The category template is at `src/templates/categoryTemmplate.js`. The template needs to list the recipes that are included in the category. Since these are markdown files, I'm using the `allMdx` query to pull them in, filtering on the category, and sorting by title.
+
+## Tag Pages
+
+This is similar to making the Category pages, but obtaining the collection of tags was quite different. In the `createPages` loop in `gatsby-node.js`, when it's running the `recipes` collection, it pulls out the tags from the frontmatter and adds them to a Set `tags` (see [the MDN Set documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)) so repeated tags will only show up once.
+
+In the tagTemplate, I run a query to pull up only the pages where the tag is in the frontmatter. This is sorta cool:
+
+``` graphql
+allMdx(
+  filter: { frontmatter: { tags: { in: [$tag] } } }
+  sort: { fields: fields___sortTitle, order: ASC }
+) {
+  nodes {
+    ...RecipeFragment
+  }
+  totalCount
+}
+```
+
+The `filter` line took a minute to figure out. I didn't have `$tag` in brackets, and it needs to be a collection. When it was a literal string, it worked fine, but the signature is `[String]`.
+
+## Sorting recipes
+
+I noticed when writing the tags pages, that sorting was done in a case-sensitive manner. I didn't find a flag I could use to make it case-insensitive, so I created another field that is the down-cased version of the node title, called `sortTitle`.

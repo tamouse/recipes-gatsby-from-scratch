@@ -5,6 +5,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
   const recipeTemplate = path.resolve("./src/templates/recipeTemplate.js")
   const categoryTemplate = path.resolve("./src/templates/categoryTemplate.js")
+  const tagTemplate = path.resolve("./src/templates/tagTemplate.js")
 
   return graphql(`
     {
@@ -15,6 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
           }
           frontmatter {
             title
+            tags
           }
           fileAbsolutePath
         }
@@ -31,6 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const recipes = result.data.allMdx.nodes
+    let tags = new Set()
 
     // create page for each mdx file
     recipes.forEach(recipe => {
@@ -40,8 +43,15 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           slug: recipe.fields.slug,
           category: recipe.fields.category,
+          sortTitle: recipe.fields.sortTitle,
         },
       })
+
+      if (recipe && recipe.frontmatter && recipe.frontmatter.tags) {
+        recipe.frontmatter.tags.map(tag => {
+          tags.add(tag)
+        })
+      }
     })
 
     const categories = result.data.allDirectory.nodes
@@ -52,6 +62,16 @@ exports.createPages = ({ actions, graphql }) => {
         component: categoryTemplate,
         context: {
           category: category.relativePath,
+        },
+      })
+    })
+
+    tags.forEach(tag => {
+      createPage({
+        path: `/tags/${tag}/`,
+        component: tagTemplate,
+        context: {
+          tag,
         },
       })
     })
@@ -67,6 +87,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       value,
     })
+    createNodeField({
+      name: `sortTitle`,
+      node,
+      value: node.frontmatter.title.toLowerCase(),
+    })
+    // console.log({
+    //   dump: node.frontmatter.title.toLowerCase(),
+    //   typeof: typeof node.frontmatter.title,
+    // })
     createNodeField({
       name: `recipeCategory`,
       node,

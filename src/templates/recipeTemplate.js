@@ -1,8 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import PageHeader from "../components/PageHeader"
 import BreadCrumbs from "../components/BreadCrumbs"
+import TagList from "../components/TagList"
 
 export default ({ data }) => {
   const { frontmatter, fields, body } = data.mdx
@@ -18,6 +19,7 @@ export default ({ data }) => {
       <article>
         <h1>{frontmatter.title}</h1>
         <p>{frontmatter.date}</p>
+        <TagList tags={frontmatter.tags} />
         <MDXRenderer>{body}</MDXRenderer>
       </article>
     </>
@@ -30,6 +32,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "YYYY MMM Do")
+        tags
       }
       fields {
         recipeCategory
