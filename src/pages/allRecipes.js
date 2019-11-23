@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import PageHeader from "../components/PageHeader"
-import Sidebar from "../components/Sidebar"
+import Layout from "../components/Layout"
 import RecipesList from "../components/RecipeList"
 import { RecipeFragment } from "../queries/recipeFragment" // eslint-disable-line
 
@@ -11,12 +10,10 @@ export default ({ data }) => {
   } = data
 
   return (
-    <>
-      <PageHeader />
-      <Sidebar />
+    <Layout>
       <h3>Recipes ({numRecipes})</h3>
       <RecipesList recipes={recipes} />
-    </>
+    </Layout>
   )
 }
 

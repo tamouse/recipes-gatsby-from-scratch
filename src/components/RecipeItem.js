@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 function excerptReipe(body) {
   // NOTE: I need this since the standard `excerpt` just snags all the text and only
@@ -12,13 +13,19 @@ function excerptReipe(body) {
 }
 
 export default ({ recipe }) => (
-  <>
+  <RecipeCard>
     <Link to={recipe.fields.slug}>
       <strong>{recipe.frontmatter.title}</strong>
     </Link>{" "}
-    <em>{recipe.frontmatter.date}</em> (<code>{recipe.id}</code>)
-    <p>
-      <em>{excerptReipe(recipe.rawBody)}</em>
-    </p>
-  </>
+    <small>{recipe.frontmatter.date}</small>
+    <RecipeExcerpt>{excerptReipe(recipe.rawBody)}</RecipeExcerpt>
+  </RecipeCard>
 )
+
+const RecipeCard = styled.div`
+  border: 1px solid black;
+  padding: 1em;
+`
+const RecipeExcerpt = styled.div`
+  font-style: italic;
+`
