@@ -1,5 +1,11 @@
 # Gatsby 2.0 Edition of my recipe file
 
+## NOTE:
+
+I'm abandoning the further development of this particular version of the great tamouse recipe file. I've got another idea to try it as a JAMStack app, using Netlify, Gatsby, and Fauna (a GraphQL SaaS).
+
+## Introduction
+
 There have been at least 2 other attemps at doing this in Gatsby.
 
 I'm following this post to construct it from scratch: <https://blog.scottspence.me/build-a-coding-blog-with-mdx-and-gatsby-2019> which is actually pretty good. The post is talking about building a blog, but it's a reasonable step to think of recipes as blog posts.
